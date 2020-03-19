@@ -1,0 +1,35 @@
+// Font Family
+@heading-font: 'Nunito', Helvetica, Arial, sans-serif;
+@default-font: 'Nunito', Helvetica, Arial, sans-serif;
+@text-font: 'Nunito', Helvetica, Arial, sans-serif;
+
+// Color Swatches
+@primary-color: #00BAB2;
+@secondary-color: lighten(#00BAB2, 12.5%);
+@dark-color: #102245;
+@preheader-color: #fff;
+
+// Background
+.gradient-overlay-background() {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02739d+0,6eb8a4+100&0.65+0,1+100 */
+    background: -moz-linear-gradient(45deg, rgba(2,115,157,0.65) 0%, rgba(110,184,164,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(2,115,157,0.65) 0%,rgba(110,184,164,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(2,115,157,0.65) 0%,rgba(110,184,164,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a602739d', endColorstr='#6eb8a4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.gradient-background() {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02739d+0,6eb8a4+100&0.65+0,1+100 */
+    background: -moz-linear-gradient(45deg, rgba(2,115,157,1) 0%, rgba(110,184,164,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(2,115,157,1) 0%,rgba(110,184,164,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(2,115,157,1) 0%,rgba(110,184,164,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a602739d', endColorstr='#6eb8a4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.border-color-gradient() {
+    -moz-border-image: -moz-linear-gradient(45deg, rgba(2,115,157,0.65) 0%, rgba(110,184,164,1) 100%); /* FF3.6-15 */
+    -webkit-border-image: -webkit-linear-gradient(45deg, rgba(2,115,157,0.65) 0%,rgba(110,184,164,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    border-image: linear-gradient(45deg, rgba(2,115,157,0.65) 0%,rgba(110,184,164,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-image-slice: 1;
+}
+
+@import '_clio.less';

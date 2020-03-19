@@ -1,0 +1,37 @@
+// .mini-info
+.mini-info {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	// .mini-info__heading
+    &__heading {
+		color: #000;
+		font-size: 0.875em;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		
+		// .mini-info__heading--white
+		&--white {
+			color: #fff;
+		}
+		
+    }
+
+	// .mini-info__value
+	&__value {
+		font-size: 1.75em;
+		font-weight: bold;
+		color: @primary-color;
+		letter-spacing: 2px;
+		
+		.respond-sm({
+			font-size: 2.5em;
+		});
+	}
+}

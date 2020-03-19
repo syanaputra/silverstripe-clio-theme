@@ -1,0 +1,26 @@
+// The Magic
+// Note: @primary-color is loaded in respective clio-{color}.less
+@default-body-color: #5f5f5f;
+@black1: #151515;
+@black2: #393939;
+@black3: #5b5b5b;
+@gray1: #777;
+@gray2: #999;
+@gray3: #b0b0b0;
+@white: #fff;
+@lightgray1: #ccc;
+@lightgray2: #f1f2f3;
+
+html, body {
+	background: #fff;
+	color: @default-body-color;
+	font-family: @default-font;
+	font-size: 16px;
+}
+
+body {
+	&.search--active,
+	&.menu--active {
+		overflow: hidden;
+	}
+}

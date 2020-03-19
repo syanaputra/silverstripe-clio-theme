@@ -1,0 +1,26 @@
+.social-list--left {
+  text-align: left;
+}
+.social-list--left .social-list__item:first-child {
+  margin-left: 0;
+}
+.social-list--right {
+  text-align: right;
+}
+.social-list--right .social-list__item:last-child {
+  margin-right: 0;
+}
+.social-list__item {
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 5px;
+}
+.social-list__item:last-child {
+  margin-right: 0;
+}
+.social-list__item--circle {
+  border-radius: 100px;
+}

@@ -1,0 +1,23 @@
+.article-meta__block {
+    .post-categories {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            
+            &:after {
+                content: ', ';
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

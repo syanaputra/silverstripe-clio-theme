@@ -1,0 +1,89 @@
+@line-size: 2px;
+.material-form {
+    .form-group {
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-top: 20px;
+
+        &:after {
+            content: '';
+            background: @primary-color;
+            height: @line-size;
+            position: absolute;
+            bottom: -@line-size;
+            left: 50%;
+            width: 0%;
+            -moz-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            .default-transition();
+        }
+
+        &.active {
+            &:after {
+                width: 100%;
+                opacity: 0;
+            }
+            label {
+                top: 0;
+                font-size: 0.75em;
+                opacity: 0.75;
+            }
+        }
+
+        &.focus {
+            &:after {
+                width: 100%;
+                opacity: 1;
+            }
+            label {
+                top: 0;
+                font-size: 0.75em;
+                color: @primary-color;
+            }
+        }
+
+        label {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            z-index: 1;
+            font-size: 1em;
+            font-weight: 300;
+
+            .default-transition();
+        }
+
+        .form-control {
+            position: relative;
+            z-index: 2;
+            border: 0;
+            box-shadow: none;
+            font-size: 1em;
+            padding: 2px 0 5px;
+            height: auto;
+            background: transparent;
+            color: @black3;
+        }
+    }
+    
+    .form-control {
+    	height: auto;
+    	border-radius: 0;
+    	box-shadow: none;
+    	border: 2px solid transparent;
+    	padding: 15px 25px;
+    
+    	&:focus {
+    		outline: none;
+    		box-shadow: none;
+    		border-color: transparent;
+    	}
+    }
+    
+    // . Input Group
+    .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+    	border-top-left-radius: 300px;
+    	border-bottom-left-radius: 300px;
+    }
+}

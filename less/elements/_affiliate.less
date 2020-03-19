@@ -1,0 +1,24 @@
+// .affiliate
+.affiliate {
+	// .affiliate__item
+	&__item {
+		padding: 0 30px;
+	}
+
+	// .affiliate__link
+	&__link {
+		opacity: 0.5;
+		.default-transition();
+
+		&:hover, &:focus {
+			opacity: 1;
+			outline: none;
+		}
+	}
+
+	// .affiliate__image
+	&__image {
+		max-width: 100%;
+		height: auto;
+	}
+}

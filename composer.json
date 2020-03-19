@@ -12,14 +12,15 @@
     ],
     "require": {
         "composer/installers": "*",
-        "silverstripe/framework": "4.5.2@stable"
+        "silverstripe/framework": "^4"
     },
 	"extra": {
         "expose": [
             "css",
             "images",
-            "javascript",
-            "webfonts"
+            "js",
+            "fonts",
+            "plugins"
         ]
 	}
 }

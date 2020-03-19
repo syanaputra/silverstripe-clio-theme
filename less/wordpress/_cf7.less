@@ -1,0 +1,91 @@
+.wpcf7 {
+    .wpcf7-response-output {
+        border: 0;
+        background: #f0f0f0;
+        color: #444;
+        padding: 12px 15px;
+
+        &.wpcf7-mail-sent-ok {
+            background: #43A047;
+            color: #fff;
+        }
+
+        &.wpcf7-mail-sent-ng,
+        &.wpcf7-aborted {
+            background: #c62828;
+            color: #fff;
+        }
+
+        &.wpcf7-spam-blocked,
+        &.wpcf7-validation-errors,
+        &.wpcf7-acceptance-missing {
+            background: #FF9800;
+            color: #fff;
+        }
+    }
+}
+
+.wpcf7-checkbox,
+.wpcf7-radio {
+    label {
+        input {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 7.5px 0 0;
+        }
+
+        .wpcf7-list-item-label {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.25em;
+            font-weight: normal;
+        }
+    }
+
+    .wpcf7-list-item {
+        margin: 0 0.5em 0 1em;
+    }
+}
+
+.checkbox.checkbox--wpcf7 {
+    label {
+        font-size: 1em;
+    }
+
+    .wpcf7-checkbox .wpcf7-list-item {
+        margin: 0;
+    }
+
+    .wpcf7-list-item-label {
+        font-weight: bold;
+    }
+
+    .text-box {
+        padding-left: 30px;
+    }
+
+    .wpcf7-not-valid-tip {
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
+
+.wpcf7-acceptance {
+    .wpcf7-list-item {
+        input[type=checkbox] {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 7.5px 0 0;
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    .wpcf7-list-item-label {
+        font-size: 1.25em;
+        font-weight: normal;
+    }
+}

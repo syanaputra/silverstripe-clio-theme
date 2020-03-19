@@ -1,0 +1,100 @@
+// .button-box
+.button-box {
+	margin-bottom: 20px;
+	.respond-lg({
+		margin-bottom: 30px;
+	});
+
+	// .button-box--center
+	&--center {
+		text-align: center;
+	}
+}
+
+// .btn
+.btn {
+	border-width: 2px;
+	border-radius: 300px;
+	background: transparent;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 13px 30px;
+	.transition(all ease-in-out 100ms);
+
+	&.btn-md {
+		.respond-sm({
+			font-size: 14px;
+			padding: 17.5px 35px;
+		});
+	}
+
+
+	&.btn-lg {
+		.respond-sm({
+			font-size: 14px;
+			padding: 22.5px 45px;
+		});
+	}
+
+	&.btn-lg-flat {
+		.respond-sm({
+			font-size: 14px;
+			padding: 17.5px 30px;
+			width: 250px;
+			max-width: 100%;
+		});
+	}
+
+	&.btn-default {
+		.bootstrap-button(#aaa);
+	}
+
+	&.btn-primary {
+		.bootstrap-button(@primary-color);
+	}
+
+	&.btn-primary-fill {
+		.bootstrap-button-fill(@primary-color, #fff, darken(@primary-color, 10%), #fff);
+	}
+
+	&.btn-black-fill {
+		.bootstrap-button-fill(#333, #fff, darken(#333, 10%), #fff);
+	}
+
+	&.btn-white-fill {
+		.bootstrap-button-fill(#fff, #333, #eee, #333);
+	}
+
+	&.btn-black-border {
+		.bootstrap-button-border(#333, #fff, @primary-color, #fff);
+	}
+
+	&.btn-white-border {
+		.bootstrap-button-border(#fff, #fff, #fff, @primary-color);
+	}
+
+	&.btn-round-icon {
+		@btn-size: 40px;
+		border-radius: 400px;
+		text-align: center;
+		padding: 0;
+		width: @btn-size;
+		height: @btn-size;
+		line-height: @btn-size;
+		letter-spacing: normal;
+
+		.fa {
+			vertical-align: text-top;
+		}
+	}
+
+	.icon-pos-right {
+		margin-left: 10px;
+	}
+
+	.icon-pos-left {
+		margin-right: 10px;
+	}
+}

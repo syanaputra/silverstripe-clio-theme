@@ -1,0 +1,36 @@
+// .vspace
+.vspace {
+    padding-bottom: 30px;
+
+    .respond-md({
+        padding-bottom: 40px;
+    });
+
+    // .vspace--big
+    &--big {
+        padding-bottom: 40px;
+
+        .respond-md({
+            padding-bottom: 50px;
+        });
+    }
+
+    // .vspace--small
+    &--small {
+        padding-bottom: 20px;
+
+        .respond-md({
+            padding-bottom: 30px;
+        });
+    }
+
+    .respond-md({
+        &[class*='col-'] {
+            padding-bottom: 0;
+        }
+    });
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}

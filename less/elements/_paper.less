@@ -1,0 +1,51 @@
+// .paper
+.paper {
+	padding: 22.5px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+	
+	.respond-lg({
+		padding: 35px;
+	});
+	
+	// .paper--white
+	&--white {
+		background: #fff;
+	}
+	
+	// .paper__content
+	&__content {
+		// .paper__content__item
+		&__item {
+			border-bottom: 1px solid #ddd;
+			padding: 15px 0;
+			
+			&:last-child {
+				border-bottom: 0;
+			}
+			
+			> *:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	// .paper__heading
+	&__heading {
+		color: @primary-color;
+		font-size: 1.313em;
+		font-weight: bold;
+		border-bottom: 2px solid #ddd;
+		padding-bottom: 15px;
+	}
+	
+	// .paper__mini-heading
+	&__mini-heading {
+		color: #000;
+		font-size: 0.875em;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	
+	
+}

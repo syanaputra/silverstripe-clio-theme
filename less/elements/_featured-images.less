@@ -1,0 +1,120 @@
+// . Featured Image
+@featured-image-spacing: 5px;
+.featured-images {
+	margin-top: 30px;
+
+	.row {
+		margin-left: -@featured-image-spacing;
+		margin-right: -@featured-image-spacing;
+
+		[class*="col-"] {
+			padding-left: @featured-image-spacing;
+			padding-right: @featured-image-spacing;
+		}
+	}
+}
+
+// .featured-image
+.featured-image {
+
+	// .featured-image__item
+	&__item {
+		position: relative;
+		margin-top: @featured-image-spacing;
+		margin-bottom: @featured-image-spacing;
+
+		// .featured-image__item--height-1
+		&--height-1 {
+			height: 300px;
+		}
+
+		// .featured-image__item--height-1
+		&--height-2 {
+			height: 350px;
+		}
+
+		// .featured-image__item--height-1
+		&--height-3 {
+			height: 250px;
+		}
+	}
+
+	// .featured-image__link
+	&__link {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+
+		&:before {
+			.position-fullscreen(1);
+			content: '';
+			opacity: 0;
+			.gradient-overlay-background();
+			.default-transition();
+		}
+
+		&:hover, &:focus {
+			color: #fff;
+
+			&:before {
+				opacity: 0.5;
+			}
+
+			.featured-image__action {
+				opacity: 1;
+				margin-top: 25px;
+			}
+		}
+	}
+
+	// .featured-image__image
+	&__image {
+		.position-fullscreen(0);
+		background-color: #999;
+		background-position: center;
+		background-size: cover;
+
+		&:before {
+			content: '';
+			.position-fullscreen(0);
+			background: rgba(0,0,0,0.45);
+		}
+	}
+
+	// .featured-image__description
+	&__description {
+		.position-vertical-center(2);
+		.default-transition();
+		text-align: center;
+		padding: 15px;
+	}
+
+	// .featured-image__title
+	&__title {
+		font-size: 1.2em;
+		font-weight: 300;
+	}
+
+	// .featured-image__action
+	&__action {
+		position: relative;
+		font-size: 0.9em;
+		font-weight: 600;
+		margin-top: -16px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		opacity: 0;
+		.default-transition();
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -15px;
+			left: 20%;
+			right: 20%;
+			border-top: 1px solid rgba(255,255,255,0.2);
+		}
+	}
+}

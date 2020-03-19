@@ -1,0 +1,33 @@
+// . Contact Info
+// .contact-info
+.contact-info {
+	margin-bottom: 40px;
+
+	// .contact-info__item
+	&__item {
+		font-size: 0.875em;
+		padding: 17.5px 0;
+		border-top: 1px solid rgba(0,0,0,0.1);
+		&:last-of-type {
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+		}
+	}
+
+	// .contact-info__title
+	&__title {
+		font-weight: 600;
+		color: @primary-color;
+		.fa {
+			width: 20px;
+		}
+	}
+
+	// .contact-info__content
+	&__content {
+		word-break: break-all;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+/node_modules
+/.idea
+/.sass-cache
+/__design
+/__staging
+/__public
+/webfonts/.DS_Store
+/images/.DS_Store
+/css/.DS_Store

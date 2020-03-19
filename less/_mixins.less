@@ -1,0 +1,200 @@
+@xs-max: 767px;
+@sm-min: 768px;
+@sm-max: 991px;
+@md-min: 992px;
+@md-max: 1199px;
+@lg-min: 1200px;
+@lg-max: 1399px;
+@xlg-min: 1400px;
+
+.respond-xs(@content) {
+    @media only screen and (max-width: @xs-max) {
+        @content();
+    }
+}
+
+.respond-sm(@content) {
+    @media only screen and (min-width: @sm-min) {
+        @content();
+    }
+}
+
+.respond-sm-only(@content) {
+    @media only screen and (min-width: @sm-min) and (max-width: @sm-max) {
+        @content();
+    }
+}
+
+.respond-md(@content) {
+    @media only screen and (min-width: @md-min) {
+        @content();
+    }
+}
+
+.respond-md-only(@content) {
+    @media only screen and (min-width: @md-min) and (max-width: @md-max) {
+        @content();
+    }
+}
+
+.respond-tablet(@content) {
+    @media only screen and (min-width: @sm-min) and (max-width: @md-max) {
+        @content();
+    }
+}
+
+.respond-lg(@content) {
+    @media only screen and (min-width: @lg-min) {
+        @content();
+    }
+}
+
+.respond-lg-only(@content) {
+    @media only screen and (min-width: @lg-min) and (max-width: @lg-max) {
+        @content();
+    }
+}
+
+.respond-xlg(@content) {
+    @media only screen and (min-width: @xlg-min) {
+        @content();
+    }
+}
+
+.respond-xl(@content) {
+    .respond-xlg(@content);
+}
+
+// Button
+.bootstrap-button(@btn-color) {
+    border-color: @btn-color;
+    color: @btn-color;
+
+    &:hover, &:focus {
+        background: @btn-color;
+        color: #fff;
+        outline: none;
+    }
+
+    &:active {
+        border-color: darken(@btn-color, 5%);
+    }
+}
+
+.bootstrap-button-fill(@original-color, @font-color, @hover-color, @hover-font-color) {
+    background: @original-color;
+    border-color: @original-color;
+    color: @font-color;
+
+    &:hover, &:focus {
+        background: @hover-color;
+        border-color: @hover-color;
+        color: @hover-font-color;
+        outline: none;
+    }
+
+    &:active {
+        border-color: darken(@hover-color, 5%);
+    }
+}
+
+.bootstrap-button-border(@original-color, @font-color, @hover-color, @hover-font-color) {
+    background: transparent;
+    border-color: @original-color;
+    color: @font-color;
+
+    &:hover, &:focus {
+        background: @hover-color;
+        border-color: @hover-color;
+        color: @hover-font-color;
+        outline: none;
+    }
+
+    &:active {
+        border-color: darken(@hover-color, 5%);
+    }
+}
+
+.button-close() {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+
+    &:focus, &:hover {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+// Position
+.position-fullscreen-fixed(@z-index) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: @z-index;
+}
+
+.position-fullscreen(@z-index) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: @z-index;
+}
+
+.position-vertical-center(@z-index) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: @z-index;
+    .transform(0, -50%, 0);
+}
+
+// Transform
+.transform(@x, @y, @z) {
+    -webkit-transform: translate3d(@x, @y, @z);
+    -moz-transform: translate3d(@x, @y, @z);
+    transform: translate3d(@x, @y, @z);
+}
+
+// Transition
+.transition(@transition) {
+    -webkit-transition: @transition;
+	-moz-transition: @transition;
+    transition: @transition;
+}
+
+.default-transition() {
+    .transition(all ease-in-out 200ms);
+}
+
+// Shadow
+.shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+.default-shadow() {
+    .shadow(1px 1px 3px rgba(0, 0, 0, 0.15));
+}
+
+// Placeholder
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}

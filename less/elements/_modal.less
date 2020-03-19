@@ -1,0 +1,45 @@
+// .modal
+.modal {
+	// .modal-content
+	&-content {
+		border-radius: 0;
+	}
+	
+	// .modal-title
+	&-title {
+		font-weight: bold;
+		font-size: 1.15em;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	// .modal-header
+	&-header {
+		position: relative;
+		padding: 50px 30px 20px;
+		border-bottom: 0;
+		text-align: center;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			.transform(-50%, 0, 0);
+			width: 30px;
+			height: 3px;
+			.gradient-background();
+		}
+		
+		.close {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+		}
+	}
+
+	// .modal-body
+	&-body {
+		padding: 40px 30px 30px;
+	}
+}

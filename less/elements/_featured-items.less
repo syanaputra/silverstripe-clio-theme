@@ -1,0 +1,238 @@
+// .featured-items
+.featured-items {
+	margin-top: 30px;
+
+	// .featured-items--type-1
+	&--type-1 {
+		margin: 20px 0;
+		
+		// .featured-items--type-1__image
+		&__item {
+			position: relative;
+			margin-bottom: 20px;
+			
+			.respond-sm({
+				padding: 0 25px 50px 0;
+				margin-bottom: 50px;
+			});
+		}
+		
+		// .featured-items--type-1__image
+		&__image {
+		
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		
+		// .featured-items--type-1__image-container
+		&__image-container {
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+		}
+		
+		// .featured-items--type-1__content
+		&__content {
+			display: block;
+			position: relative;
+			max-width: 100%;
+			padding: 10px 0;
+			
+			.respond-sm({
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding: 20px 22.5px;
+				width: 90%;
+				background: #fff;
+				box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+			});
+			
+			.respond-lg({
+				width: 450px;
+				padding: 30px 32.5px;
+				width: 375px;
+			});
+			
+			// .featured-items--type-1__content--arrow
+			&--arrow {
+				.respond-sm({
+					padding-right: 50px;
+				});
+				
+				.respond-lg({
+					padding-right: 80px;
+				});
+				
+				&:after {
+					content: url('../images/icons/arrow-right-black.svg');
+					display: none;
+					position: absolute;
+					top: 50%;
+					opacity: 0.25;
+					.transform(0, -50%, 0);
+					.default-transition();
+					
+					.respond-sm({
+						display: block;
+						right: 15px;
+						width: 40px;
+					});
+					
+					.respond-lg({
+						right: 15px;
+						width: 50px;
+					});
+				}
+				
+				&:hover, &:focus {
+					&:after {
+						opacity: 0.75;
+					}
+				}
+			}
+		}
+		
+		// .featured-items--type-1__title
+		&__title {
+			color: @primary-color;
+			font-weight: bold;
+			font-size: 1em;
+			text-transform: uppercase;
+			line-height: 120%;
+			
+			.respond-sm({
+				font-size: 1.125em;
+			});
+			
+			.respond-lg({
+				font-size: 1.25em;
+			});
+		}
+		
+		// .featured-items--type-1__subtitle
+		&__subtitle {
+			color: @secondary-color;
+			font-weight: bold;
+			font-size: 0.875em;
+			text-transform: uppercase;
+			margin-top: 5px;
+			
+			.respond-sm({
+				font-size: 0.933em;
+			});
+			
+			.respond-lg({
+				font-size: 1.063em;
+			});
+		}
+	}
+
+	// .featured-items--type-2
+	&--type-2 {
+		margin: 20px 0;
+
+		// .featured-items--type-2__image
+		&__item {
+			position: relative;
+			margin-bottom: 20px;
+
+			.respond-sm({
+				margin-bottom: 35px;
+			});
+		}
+
+		// .featured-items--type-2__image
+		&__image {
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		// .featured-items--type-2__image-container
+		&__image-container {
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+		}
+
+		// .featured-items--type-2__content-container
+		&__content-container {
+			&:before {
+				content: '';
+				background: @primary-color;
+				opacity: 0.75;
+				.position-fullscreen(1);
+				.default-transition();
+			}
+
+			&:after {
+				content: '';
+				.position-fullscreen(1);
+				margin: 20px;
+				border: 1px solid #fff;
+				opacity: 0.5;
+				.default-transition();
+			}
+
+			&:hover, &:focus {
+				&:before {
+					background: @primary-color;
+					opacity: 0.95;
+				}
+				&:after {
+					margin: 0;
+					opacity: 0;
+				}
+			}
+		}
+
+		// .featured-items--type-2__content
+		&__content {
+			display: block;
+			padding: 25px 40px;
+			text-align: center;
+			.position-vertical-center(2);
+
+			.respond-sm({
+				padding: 37.5px 40px;
+			});
+		}
+
+		// .featured-items--type-2__title
+		&__title {
+			color: #fff;
+			font-weight: bold;
+			font-size: 1em;
+			text-transform: uppercase;
+			line-height: 120%;
+
+			.respond-sm({
+				font-size: 1.125em;
+			});
+
+			.respond-lg({
+				font-size: 1.25em;
+			});
+		}
+
+		// .featured-items--type-2__subtitle
+		&__subtitle {
+			color: #fff;
+			font-weight: bold;
+			font-size: 0.875em;
+			text-transform: uppercase;
+			margin-top: 5px;
+
+			.respond-sm({
+				font-size: 0.933em;
+			});
+
+			.respond-lg({
+				font-size: 1.063em;
+			});
+		}
+	}
+}
