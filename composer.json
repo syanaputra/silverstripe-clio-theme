@@ -1,0 +1,25 @@
+{
+    "name": "syanaputra/silverstripe-clio-theme",
+    "description": "Integrated Clio theme for Silverstripe 4",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Stephanus Yanaputra",
+            "homepage": "http://syanaputra.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": "4.5.2@stable"
+    },
+	"extra": {
+        "expose": [
+            "css",
+            "images",
+            "javascript",
+            "webfonts"
+        ]
+	}
+}
