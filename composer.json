@@ -7,12 +7,14 @@
     "authors": [
         {
             "name": "Stephanus Yanaputra",
+            "email": "stephanus.yanaputra@gmail.com",
             "homepage": "http://syanaputra.com"
         }
     ],
     "require": {
         "composer/installers": "*",
-        "silverstripe/framework": "^4"
+        "silverstripe/framework": "^4",
+        "syanaputra/silverstripe-extra-template-syntax": "^1"
     },
 	"extra": {
         "expose": [
