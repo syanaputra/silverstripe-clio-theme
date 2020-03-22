@@ -12,7 +12,6 @@
         }
     ],
     "require": {
-        "composer/installers": "*",
         "silverstripe/framework": "^4",
         "syanaputra/silverstripe-clio-core": "dev-master",
         "syanaputra/silverstripe-extra-template-syntax": "^1"
