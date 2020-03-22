@@ -12,9 +12,9 @@
         }
     ],
     "require": {
-        "composer/installers": "dev-master",
+        "composer/installers": "*",
         "silverstripe/framework": "^4",
-        "syanaputra/silverstripe-clio-core": "*",
+        "syanaputra/silverstripe-clio-core": "dev-master",
         "syanaputra/silverstripe-extra-template-syntax": "^1"
     },
 	"extra": {
